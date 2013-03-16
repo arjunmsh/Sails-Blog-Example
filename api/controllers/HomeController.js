@@ -1,8 +1,8 @@
 /*---------------------
-	:: Blog 
+	:: Home 
 	-> controller
 ---------------------*/
-var BlogController = {
+var HomeController = {
 
 };
-module.exports = BlogController;
+module.exports = HomeController;

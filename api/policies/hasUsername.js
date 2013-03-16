@@ -1,10 +1,10 @@
 /**
-* Allow any authenticated user.
+* Allow any user that has a username.
 */
 module.exports = function (req,res,ok) {
 	
 	// User is allowed, proceed to controller
-	if (req.nick) {
+	if (req.session.nick) {
 		return ok();
 	}
 
