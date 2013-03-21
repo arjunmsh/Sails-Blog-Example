@@ -8,7 +8,7 @@ module.exports = {
 
 		line: 'INTEGER',
 		nick: 'STRING',
-		string: 'STRING'
+		message: 'STRING'
 
 	}
 

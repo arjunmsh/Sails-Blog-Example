@@ -1,3 +1,15 @@
+<script>
+	jQuery(document).ready(function($) {
+		var socket = io.connect('http://192.168.0.152:8084');
+		socket.request('/chat',{
+			message: 'hi there!',
+			nick: 'Bob'
+		}, function (response) {
+			$('#chat').append(response.nick + ":" + response.message);
+		});
+	});
+</script>
+
 <% if (models.length) { %>
     <% models.forEach(function(model){ %>
 		<div class="blog_entry">
@@ -6,3 +18,5 @@
     	</div>
     <% }) %>
 <% } %>
+
+<div id="chat" style="float:right;width:300px;background:#ccc;border:1pt solid #666;"></div>
